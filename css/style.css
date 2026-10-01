@@ -417,12 +417,11 @@ h2 {
 
 .project .media {
     width: 100%;
-
     aspect-ratio: 16 / 9;
-
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #000;
 }
 
 
