@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio Content Editor</title>
+<link rel="stylesheet" href="./css/admin.css">
+</head>
+<body>
+<header class="admin-header"><div><p class="eyebrow">LOCAL CONTENT EDITOR</p><h1>Portfolio Admin</h1></div><a href="./index.html">Voir le site ↗</a></header>
+<div class="notice"><strong>Important :</strong> cette page ne contient aucun mot de passe. GitHub Pages est statique : un mot de passe JavaScript serait public. Utilise cet éditeur localement, puis exporte <code>content.json</code> et remplace <code>data/content.json</code> dans ton dépôt.</div>
+<main class="admin-layout">
+<aside>
+  <button data-tab="general" class="active">Général</button>
+  <button data-tab="hero">Intro</button>
+  <button data-tab="about">À propos</button>
+  <button data-tab="skills">Compétences</button>
+  <button data-tab="projects">Projets</button>
+  <button data-tab="contact">Contact</button>
+</aside>
+<section class="editor">
+  <div class="toolbar">
+    <label>Langue <select id="edit-language"><option value="fr">Français</option><option value="en">English</option></select></label>
+    <button id="import-button">Importer JSON</button>
+    <input id="import-file" type="file" accept=".json,application/json" hidden>
+    <button id="reset-button">Recharger</button>
+    <button id="export-button" class="primary">Exporter content.json</button>
+  </div>
+  <div id="editor-content"></div>
+</section>
+</main>
+<script src="./js/admin.js"></script>
+</body></html>
