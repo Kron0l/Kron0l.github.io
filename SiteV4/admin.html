@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — Portfolio</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <div id="login-screen" class="login-screen">
+        <div class="login-box">
+            <p class="eyebrow">PRIVATE AREA</p>
+            <h1>Administration</h1>
+            <p>Accès réservé à l'administrateur du portfolio.</p>
+            <form id="login-form">
+                <label for="admin-password">Mot de passe</label>
+                <input id="admin-password" type="password" placeholder="••••••••" required>
+                <button class="admin-button primary" type="submit">Se connecter</button>
+                <small>Démo : <strong>admin123</strong></small>
+                <p id="login-error" class="error"></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="admin-app" class="admin-app hidden">
+        <aside class="sidebar">
+            <div class="admin-logo">TRISTAN<span>.DEV</span><small>ADMIN</small></div>
+            <nav>
+                <a href="#general" class="active">Général</a>
+                <a href="#about-admin">À propos</a>
+                <a href="#skills-admin">Compétences</a>
+                <a href="#projects-admin">Projets</a>
+                <a href="#contact-admin">Contact</a>
+            </nav>
+            <div class="sidebar-bottom">
+                <a href="index.html" target="_blank">↗ Voir le site</a>
+                <button id="logout-button">Déconnexion</button>
+            </div>
+        </aside>
+
+        <main class="admin-content">
+            <header class="admin-topbar">
+                <div>
+                    <p class="eyebrow">CONTROL PANEL</p>
+                    <h1>Gestion du portfolio</h1>
+                </div>
+                <div class="top-actions">
+                    <button id="reset-button" class="admin-button danger-outline">Réinitialiser</button>
+                    <button id="save-button" class="admin-button primary">Sauvegarder</button>
+                </div>
+            </header>
+
+            <div id="save-message" class="save-message">Modifications sauvegardées.</div>
+
+            <section id="general" class="admin-section">
+<div class="section-title"><span>01</span><div><p class="eyebrow">HERO</p><h2>Page d'accueil</h2></div></div>
+<h3 class="admin-subtitle">Français</h3><div class="form-grid">
+<div class="field"><label>Petit titre</label><input data-field="fr.hero-eyebrow"></div>
+<div class="field full"><label>Grand titre</label><textarea data-field="fr.hero-title" rows="3"></textarea></div>
+<div class="field full"><label>Description</label><textarea data-field="fr.hero-text" rows="4"></textarea></div></div>
+<h3 class="admin-subtitle">English</h3><div class="form-grid">
+<div class="field"><label>Eyebrow</label><input data-field="en.hero-eyebrow"></div>
+<div class="field full"><label>Main title</label><textarea data-field="en.hero-title" rows="3"></textarea></div>
+<div class="field full"><label>Description</label><textarea data-field="en.hero-text" rows="4"></textarea></div></div>
+<h3 class="admin-subtitle">Carte de l'intro</h3><div class="form-grid">
+<div class="field"><label>Nom du projet</label><input data-field="hero-project"></div>
+<div class="field"><label>URL de l'image</label><input data-field="hero-card-image" placeholder="https://..."></div>
+<div class="field"><label>Placeholder</label><input data-field="hero-card-placeholder"></div></div>
+</section>
+
+            <section id="about-admin" class="admin-section">
+<div class="section-title"><span>02</span><div><p class="eyebrow">ABOUT</p><h2>À propos</h2></div></div>
+<h3 class="admin-subtitle">Français</h3><div class="form-grid">
+<div class="field full"><label>Phrase d'introduction</label><textarea data-field="fr.about-intro" rows="3"></textarea></div>
+<div class="field full"><label>Présentation</label><textarea data-field="fr.about-text" rows="6"></textarea></div></div>
+<h3 class="admin-subtitle">English</h3><div class="form-grid">
+<div class="field full"><label>Introduction</label><textarea data-field="en.about-intro" rows="3"></textarea></div>
+<div class="field full"><label>About text</label><textarea data-field="en.about-text" rows="6"></textarea></div></div>
+<h3 class="admin-subtitle">Carte À propos</h3><div class="form-grid">
+<div class="field"><label>URL de l'image</label><input data-field="about-image" placeholder="https://..."></div>
+<div class="field"><label>Placeholder</label><input data-field="about-image-placeholder"></div></div>
+<h3 class="admin-subtitle">Statistiques</h3><div class="form-grid">
+<div class="field"><label>Valeur 1</label><input data-field="stat-1-value"></div><div class="field"><label>Label 1 FR</label><input data-field="fr.stat-1-label"></div><div class="field"><label>Label 1 EN</label><input data-field="en.stat-1-label"></div>
+<div class="field"><label>Valeur 2</label><input data-field="stat-2-value"></div><div class="field"><label>Label 2 FR</label><input data-field="fr.stat-2-label"></div><div class="field"><label>Label 2 EN</label><input data-field="en.stat-2-label"></div>
+<div class="field"><label>Valeur 3</label><input data-field="stat-3-value"></div><div class="field"><label>Label 3 FR</label><input data-field="fr.stat-3-label"></div><div class="field"><label>Label 3 EN</label><input data-field="en.stat-3-label"></div></div>
+</section>
+
+            <section id="skills-admin" class="admin-section">
+                <div class="section-title"><span>03</span><div><p class="eyebrow">SKILLS</p><h2>Compétences</h2></div></div>
+                <div id="skills-editor" class="repeatable-editor"></div>
+                <button id="add-skill" class="admin-button secondary">+ Ajouter une compétence</button>
+            </section>
+
+            <section id="projects-admin" class="admin-section">
+                <div class="section-title"><span>04</span><div><p class="eyebrow">WORK</p><h2>Projets</h2></div></div>
+                <div id="projects-editor" class="repeatable-editor"></div>
+                <button id="add-project" class="admin-button secondary">+ Ajouter un projet</button>
+            </section>
+
+            <section id="contact-admin" class="admin-section">
+<div class="section-title"><span>05</span><div><p class="eyebrow">CONTACT</p><h2>Contact</h2></div></div>
+<h3 class="admin-subtitle">Français</h3><div class="form-grid"><div class="field full"><label>Titre</label><textarea data-field="fr.contact-title" rows="2"></textarea></div><div class="field full"><label>Texte</label><textarea data-field="fr.contact-text" rows="4"></textarea></div></div>
+<h3 class="admin-subtitle">English</h3><div class="form-grid"><div class="field full"><label>Title</label><textarea data-field="en.contact-title" rows="2"></textarea></div><div class="field full"><label>Text</label><textarea data-field="en.contact-text" rows="4"></textarea></div></div>
+<h3 class="admin-subtitle">Liens</h3><div class="form-grid"><div class="field"><label>Email</label><input type="email" data-field="contact-email"></div><div class="field"><label>GitHub</label><input data-field="github-url"></div><div class="field"><label>LinkedIn</label><input data-field="linkedin-url"></div></div>
+</section>
+        </main>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
