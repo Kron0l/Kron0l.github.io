@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Portfolio de développeur de jeux vidéo">
+  <title>Game Developer Portfolio</title>
+  <script>document.documentElement.dataset.theme=localStorage.getItem("theme")||"dark";</script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="logo" href="#home" id="site-name">TRISTAN.DEV</a>
+  <nav id="nav"></nav>
+  <div class="controls">
+    <button id="language" class="icon-button" aria-label="Changer de langue">EN</button>
+    <button id="theme" class="icon-button" aria-label="Changer de thème">☼</button>
+  </div>
+</header>
+
+<main>
+<section class="hero section" id="home">
+  <div class="hero-copy">
+    <p class="eyebrow" id="hero-eyebrow"></p>
+    <h1 id="hero-title"></h1>
+    <p class="hero-text" id="hero-text"></p>
+    <div class="actions"><a class="button primary" id="hero-primary" href="#projects"></a><a class="button ghost" id="hero-secondary" href="#contact"></a></div>
+  </div>
+  <article class="feature-card">
+    <div class="media placeholder" id="hero-image"><span>GAME PROJECT<br>IMAGE</span></div>
+    <div class="feature-copy"><small id="hero-card-label"></small><h2 id="hero-card-title"></h2><p id="hero-card-text"></p></div>
+  </article>
+</section>
+
+<section class="section split" id="about">
+  <div class="media portrait placeholder" id="about-image"><span id="about-image-caption"></span></div>
+  <div><p class="eyebrow" id="about-eyebrow"></p><h2 id="about-title"></h2><p class="lead" id="about-lead"></p><p id="about-text"></p></div>
+</section>
+
+<section class="section" id="skills"><p class="eyebrow">TECH STACK</p><h2 id="skills-title"></h2><div class="skills-grid" id="skills-list"></div></section>
+<section class="section" id="projects"><p class="eyebrow">SELECTED WORK</p><h2 id="projects-title"></h2><div class="projects-grid" id="projects-list"></div></section>
+<section class="section contact" id="contact"><p class="eyebrow" id="contact-eyebrow"></p><h2 id="contact-title"></h2><p id="contact-text"></p><a class="button primary" id="contact-button"></a></section>
+</main>
+<footer><span id="footer-name"></span><span>GAME DEVELOPER PORTFOLIO</span></footer>
+<script src="./js/main.js?v=translation-fix-2"></script>
+</body></html>
