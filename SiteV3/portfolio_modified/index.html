@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de développeur de jeux vidéo">
+    <title>Portfolio — Game Developer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="background-grid"></div>
+
+    <header class="site-header">
+        <a href="#home" class="logo">TRISTAN<span>.DEV</span></a>
+        <button class="mobile-menu" aria-label="Ouvrir le menu">☰</button>
+        <nav class="main-nav">
+            <a href="#home" data-i18n="nav-home">Accueil</a>
+            <a href="#about" data-i18n="nav-about">À propos</a>
+            <a href="#skills" data-i18n="nav-skills">Compétences</a>
+            <a href="#projects" data-i18n="nav-projects">Projets</a>
+            <a href="#contact" data-i18n="nav-contact">Contact</a>
+        </nav>
+        <div class="site-controls">
+            <button id="theme-toggle" class="control-button" type="button" aria-label="Changer de thème">
+                <span id="theme-icon">☾</span>
+            </button>
+            <button id="language-toggle" class="control-button language-button" type="button" aria-label="Changer de langue">
+                <span id="language-label">EN</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero section">
+            <div class="hero-content">
+                <p class="eyebrow" data-content="hero-eyebrow">GAME DEVELOPER / PROGRAMMER</p>
+                <h1 data-content="hero-title">Je donne vie aux<br><span>mondes virtuels.</span></h1>
+                <p class="hero-text" data-content="hero-text">
+                    Placeholder — Présentation courte de ton profil, de ta façon de développer
+                    et de ce qui te passionne dans le jeu vidéo.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="button primary" data-i18n="hero-project-button">Voir mes projets <span>↗</span></a>
+                    <a href="#contact" class="button secondary" data-i18n="hero-contact-button">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="game-card">
+                    <div class="card-corner top-left"></div>
+                    <div class="card-corner top-right"></div>
+                    <div class="card-corner bottom-left"></div>
+                    <div class="card-corner bottom-right"></div>
+                    <div class="game-card-image placeholder-image">
+                        <span>GAME<br>ART<br>PLACEHOLDER</span>
+                    </div>
+                    <div class="game-card-info">
+                        <span>01 / CURRENT PROJECT</span>
+                        <strong>PROJECT NAME</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="section-heading">
+                <span class="section-number">01</span>
+                <div>
+                    <p class="eyebrow" data-i18n="about-eyebrow">ABOUT ME</p>
+                    <h2 data-i18n="about-title">À propos</h2>
+                </div>
+            </div>
+            <div class="about-grid">
+                <div class="about-image placeholder-image">
+                    <span>PHOTO<br>PLACEHOLDER</span>
+                </div>
+                <div class="about-content">
+                    <p class="large-text" data-content="about-intro">
+                        Placeholder — Une phrase forte qui résume ton profil de développeur de jeux vidéo.
+                    </p>
+                    <p data-content="about-text">
+                        Placeholder — Présente ici ton parcours, ta formation, tes expériences et ta
+                        manière de travailler. Tu pourras modifier ce texte directement depuis
+                        l'administration.
+                    </p>
+                    <div class="stats">
+                        <div><strong data-content="stat-1-value">02+</strong><span data-content="stat-1-label">Années d'études</span></div>
+                        <div><strong data-content="stat-2-value">10+</strong><span data-content="stat-2-label">Projets</span></div>
+                        <div><strong data-content="stat-3-value">∞</strong><span data-content="stat-3-label">Idées</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <div class="section-heading">
+                <span class="section-number">02</span>
+                <div>
+                    <p class="eyebrow" data-i18n="skills-eyebrow">ARSENAL</p>
+                    <h2 data-i18n="skills-title">Compétences</h2>
+                </div>
+            </div>
+            <div class="skills-grid" id="skills-list">
+                <article class="skill-card">
+                    <span class="skill-index">01</span>
+                    <h3>C++</h3>
+                    <p>Programmation gameplay, architecture et systèmes.</p>
+                    <div class="skill-line"><span style="width: 90%"></span></div>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-index">02</span>
+                    <h3>C# / Unity</h3>
+                    <p>Gameplay, outils, UI, systèmes et prototypage.</p>
+                    <div class="skill-line"><span style="width: 92%"></span></div>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-index">03</span>
+                    <h3>SFML</h3>
+                    <p>Création de jeux 2D et programmation bas niveau.</p>
+                    <div class="skill-line"><span style="width: 82%"></span></div>
+                </article>
+                <article class="skill-card">
+                    <span class="skill-index">04</span>
+                    <h3>Tools & Systems</h3>
+                    <p>Création d'outils, éditeurs et systèmes personnalisés.</p>
+                    <div class="skill-line"><span style="width: 78%"></span></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="projects" class="section projects">
+            <div class="section-heading">
+                <span class="section-number">03</span>
+                <div>
+                    <p class="eyebrow" data-i18n="projects-eyebrow">SELECTED WORK</p>
+                    <h2 data-i18n="projects-title">Projets</h2>
+                </div>
+            </div>
+            <div class="projects-grid" id="projects-list"></div>
+        </section>
+
+        <section id="contact" class="section contact">
+            <div class="contact-box">
+                <p class="eyebrow" data-i18n="contact-eyebrow">LET'S BUILD SOMETHING</p>
+                <h2 data-content="contact-title">Un projet en tête ?<br><span>Parlons-en.</span></h2>
+                <p data-content="contact-text">
+                    Placeholder — Quelques lignes pour inviter les recruteurs ou studios à te contacter.
+                </p>
+                <a class="button primary" data-content-href="contact-email" href="mailto:placeholder@example.com">
+                    placeholder@example.com <span>↗</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <span>© <span id="year"></span> TRISTAN.DEV</span>
+        <span>GAME DEVELOPER / PORTFOLIO</span>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
