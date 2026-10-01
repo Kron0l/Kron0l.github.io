@@ -69,8 +69,12 @@ function renderAbout(d) {
   $("about-title").textContent = d.about.title;
   $("about-lead").textContent = d.about.lead;
   $("about-text").textContent = d.about.text;
-  $("about-image-caption").textContent = d.about.imageCaption;
-  setImage("about-image", DATA.images.about, esc(d.about.imageCaption));
+
+  setImage(
+    "about-image",
+    DATA.images.about,
+    esc(d.about.imageCaption)
+  );
 }
 
 function renderSkills(d) {
