@@ -36,7 +36,7 @@ function setImage(id, url, placeholder) {
 function renderAll() {
   const d = DATA[language];
   document.documentElement.lang = language;
-  $("language").textContent = language === "fr" ? "EN" : "FR";
+  $("language").textContent = language === "fr" ? "FR" : "EN";
   renderNavigation(d);
   renderHero(d);
   renderAbout(d);
